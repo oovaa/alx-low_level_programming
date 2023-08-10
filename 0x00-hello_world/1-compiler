@@ -1,3 +1,2 @@
 #!/bin/bash
-CFILE=omer.c
 gcc -c $CFILE -o ${CFILE%.c}.o
