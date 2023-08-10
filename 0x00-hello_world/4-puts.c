@@ -1,6 +1,12 @@
 #include <stdio.h>
-int main() {
-
-  puts("Programming is like building a multilingual puzzle");
+/**
+ * main - program starts and ends in main
+ * main() takes no arguments
+ * Description: prints string to standard output using puts() funtion
+ * Return: main returns 0
+ */
+int main()
+{
+	puts("Programming is like building a multilingual puzzle");
   return 0;
 }
