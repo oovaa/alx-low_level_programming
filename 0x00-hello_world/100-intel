@@ -1,2 +1,3 @@
 #!/bin/bash
-100-intelgcc -S -masm=intel $CFILE -o "$(echo $CFILE | cut -d. -f1)".s
+CFILE=omer.c
+gcc -S -masm=intel $CFILE -o `echo $CFILE | cut -d. -f1`.s
