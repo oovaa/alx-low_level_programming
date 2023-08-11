@@ -15,13 +15,18 @@ while (i < 9)
 {
 while (a < 10)
 {
+
 putchar(i + '0');
 putchar(a + '0');
+if (i + a != 17)
+{
 putchar(',');
 putchar(' ');
+}
+
 a++;
 }
-a=i+2;
+a = i + 2;
 i++;
 }
 putchar('\n');
