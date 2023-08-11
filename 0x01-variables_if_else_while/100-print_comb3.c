@@ -13,7 +13,7 @@ int i = 0;
 int a = i + 1;
 while (i < 9)
 {
-while (a < 9)
+while (a < 10)
 {
 putchar(i + '0');
 putchar(a + '0');
@@ -21,7 +21,7 @@ putchar(',');
 putchar(' ');
 a++;
 }
-a=i;
+a=i+2;
 i++;
 }
 putchar('\n');
