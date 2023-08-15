@@ -3,7 +3,7 @@
 /**
  * print_alphabet_x10 - Entry point
  *
- * Discription: a function that prints 10 times
+ * Description: a function that prints 10 times
  * the alphabet, in lowercase, followed by a new line.
  *
  * Return: no return
@@ -12,8 +12,8 @@
 void print_alphabet_x10(void)
 {
 char i;
-char a;
-for (a = 0; i < 10; i++)
+int j;
+for (j = 0; j < 10; j++)
 {
 for (i = 'a'; i <= 'z'; i++)
 _putchar(i);
