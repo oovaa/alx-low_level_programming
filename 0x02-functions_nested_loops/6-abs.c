@@ -1,12 +1,15 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - check the code
- *@int - input value
- * Return: Always 0.
- */
-int _abs(int)
-{
+ * _abs - function that computes the absolute
+ *       value of an integer
+ *
+ * @n: takes in integer type input for function
+ *
+ * Return: Always 0 (Success)
+*/
 
+int _abs(int n)
+{
+return ((n > 0) ? n : -n);
 }
