@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_last_digit - prints the 9 times table
+ * times_table - prints the 9 times table
  *
  * Return: Always 0 (Success)
 */
