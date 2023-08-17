@@ -1,31 +1,26 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
+
 /**
- * main - Entry point of the program.
+ * main - Entry point
  *
- * This program checks if a given number is positive, negative, or zero.
+ * Description: print value of n satus; zero, positive or negative
  *
- * Return: Always 0.
- */
-int main(void)
-{
-int n;
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-if (n > 0)
-{
-printf("%d is positive\n", n);
-}
-else if (n < 0)
-{
-printf("%d is negative\n", n);
-}
-else
-{
-printf("0 is zero\n");
-}
+ * Return: Always 0 (Success)
+*/
 
-
-return (0);
+void positive_or_negative(int i)
+{
+	/* my if statement */
+	if (i == 0)
+	{
+		printf("%d is zero\n", i);
+	}
+	else if (i > 0)
+	{
+		printf("%d is positive\n", i);
+	}
+	else
+	{
+		printf("%d is negative\n", i);
+	}
 }
