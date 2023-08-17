@@ -7,6 +7,7 @@
  * of five print Buzz. For numbers which are multiples of
  *  both three and five print FizzBuzz.
  *
+ * Return: Always zero
  *
 */
 
