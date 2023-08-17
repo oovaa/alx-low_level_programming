@@ -6,7 +6,7 @@
  * Description: print value of n satus; zero, positive or negative
  *
  * @i: input num
- * 
+ *
  * Return: Always 0 (Success)
 */
 
