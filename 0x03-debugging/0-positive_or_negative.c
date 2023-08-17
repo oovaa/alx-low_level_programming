@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * positive_or_negative - Entry point
  *
  * Description: print value of n satus; zero, positive or negative
+ * @i: input
  *
  * Return: Always 0 (Success)
 */
