@@ -11,17 +11,17 @@
 
 double _sqrt(double x)
 {
-	float sqrt, tmp;
+	float sq, t;
 
-	sqrt = x / 2;
-	tmp = 0;
+	sq = x / 2;
+	t = 0;
 
-	while (sqrt != tmp)
+	while (sq != t)
 	{
-		tmp = sqrt;
-		sqrt = (x / tmp + tmp) / 2;
+		t = sq;
+		sq = (x / t + t) / 2;
 	}
-	return (sqrt);
+	return (sq);
 }
 
 /**
@@ -33,26 +33,20 @@ double _sqrt(double x)
 
 void largest_prime_factor(long int num)
 {
-	int prmNu, largest;
-
-	/* first divide with the smallest prime number (two) */
-	while (num % 2 == 0)
-		num = num / 2;
-
-	/* num must be odd so we proceed to the next prime number (plus two) */
-	for (prmNu = 3; prmNu <= _sqrt(num); prmNu += 2)
-	{
-		while (num % prmNu == 0)
-		{
-			num = num / prmNu;
-			largest = prmNu;
-		}
-	}
-
-
-	if (num > 2)
-		largest = num;
-	printf("%d\n", largest);
+int pr, l;
+while (num % 2 == 0)
+	num = num / 2;
+for (pr = 3; pr <= _sqrt(num); pr += 2)
+{
+while (num % pr == 0)
+{
+num = num / pr;
+l = pr;
+}
+}
+if (num > 2)
+	l = num;
+printf("%d\n", l);
 }
 
 /**
@@ -62,8 +56,6 @@ void largest_prime_factor(long int num)
 */
 int main(void)
 {
-
-	largest_prime_factor(612852475143);
-
-	return (0);
+l_prime_factor(612852475143);
+return (0);
 }
