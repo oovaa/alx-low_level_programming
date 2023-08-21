@@ -18,4 +18,5 @@ while (l >= 0)
 putchar(*(s + l));
 l--;
 }
+putchar('\n');
 }
