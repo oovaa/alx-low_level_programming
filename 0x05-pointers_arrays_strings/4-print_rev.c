@@ -15,7 +15,7 @@ l++;
 l--;
 while (l >= 0)
 {
-_putchar(*(s + l));
+putchar(*(s + l));
 l--;
 }
 }
