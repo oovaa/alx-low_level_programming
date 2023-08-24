@@ -10,11 +10,12 @@
 
 char *string_toupper(char *c)
 {
+char *re = c; 
 while (*c)
 {
 if(*c >= 'a' && *c <= 'z')
 *c -= 32;
 c++;
 }
-return (c);
+return (re);
 }
