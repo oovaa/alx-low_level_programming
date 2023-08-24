@@ -16,12 +16,21 @@ long convertToLongLong(char *n1, char *n2) {
   return r;
 }
 
+void printbff(char *b, int size) {
+  int i;
+  for (i = 0; i < size; i++) {
+    printf("%.8x ", b);
+    b++;
+  }
+}
+
 int main() {
-  char *n = "234567892434";
+  char *n = "12343423521010";
   char *a = "234567892434";
 
-  long r = convertToLongLong(n, a);
-  printf("%ld \n", r);
+  printbff(n,sizeof(n));
+  // long r = convertToLongLong(n, a);
+  // printf("%ld \n", r);
 
   return 0;
 }
