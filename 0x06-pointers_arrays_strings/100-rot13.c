@@ -12,15 +12,13 @@ char des[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 int i, j;
 for (i = 0; s[i] != '\0'; i++)
 {
-/* if ((s[i] >= 'A' && s[i] <= 'Z') || (s[i] >= 'a' && s[i] <= 'z'))
- */{
+
 for (j = 0; src[j] != '\0'; j++)
 {
 if (s[i] == src[j])
 {
 s[i] = des[j];
 break;
-}
 }
 }
 }
