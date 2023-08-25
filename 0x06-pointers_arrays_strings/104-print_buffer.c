@@ -22,7 +22,7 @@ printf("%08x: ", i);
 for (j = i; j < i + 10; j += 2)
 {
 if (j < size)
-printf("%02x ", b[j] & 0xFF);
+printf("%02x", b[j] & 0xFF);
 else
 printf("  ");
 if (j + 1 < size)
