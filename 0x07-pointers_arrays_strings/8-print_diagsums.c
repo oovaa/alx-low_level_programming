@@ -21,6 +21,6 @@ for (i = 0; i < size; i++)
 sumFirst += a[i * size + i];
 sumSecond += a[i * size + (size - 1 - i)];
 }
-printf("%d %d\n", sumFirst, sumSecond);
+printf("%d, %d\n", sumFirst, sumSecond);
 
 }
