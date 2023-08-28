@@ -10,32 +10,57 @@
  *
 */
 
-
-
 char *_strstr(char *haystack, char *needle)
 {
-int i = 0;
-int test;
-while (haystack)
-{
-i = 0;
-test = 1;
-while (needle[i])
-{
-if (needle[i] != haystack[i])
-{
-test = 0;
-break;
-}
-i++;
-}
-if (test == 1)
-{
-return (haystack);
-}
-haystack++;
+	unsigned int i = 0, j = 0;
+
+	while (haystack[i])
+	{
+		while (needle[j] && (haystack[i] == needle[0]))
+		{
+			if (haystack[i + j] == needle[j])
+				j++;
+			else
+				break;
+		}
+		if (needle[j])
+		{
+			i++;
+			j = 0;
+		}
+		else
+			return (haystack + i);
+	}
+	return (0);
 }
 
 
-return (NULL);
-}
+/*
+*char *_strstr(char *haystack, char *needle)
+*{
+*int i = 0;
+*int test;
+*while (haystack)
+*{
+*i = 0;
+*test = 1;
+*while (needle[i])
+*{
+*if (needle[i] != haystack[i])
+*{
+*test = 0;
+*break;
+*}
+*i++;
+*}
+*if (test == 1)
+*{
+*return (haystack);
+*}
+*haystack++;
+*}
+*
+*
+*return (NULL);
+*}
+*/
