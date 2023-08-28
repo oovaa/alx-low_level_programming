@@ -21,3 +21,15 @@ char *_strchr(char *s, char c)
 
 	return (NULL);
 }
+
+/**
+*{
+*while (*s)
+*{   why did not work ?
+*if (*s == c)
+*return (s);
+*s++;
+*}
+*return (NULL);
+*}
+ */
