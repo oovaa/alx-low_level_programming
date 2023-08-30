@@ -3,6 +3,7 @@
  * check - check if it is a prime number
  * @n: the numbe to check
  * @t: check number;
+ * Return: 0 if the number is not prime, 1 if it is prime
 */
 
 int check(int t, int n)
