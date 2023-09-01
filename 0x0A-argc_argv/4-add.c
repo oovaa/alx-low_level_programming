@@ -21,7 +21,7 @@ return (0);
 }
 for (i = 1; i < argc; i++)
 {
-if (!isdigit(*argv[i]))
+if (!isdigit((unsigned char)argv[i][0]))
 {
 printf("Error\n");
 return (1);
