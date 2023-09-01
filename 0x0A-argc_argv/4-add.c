@@ -12,8 +12,10 @@
  */
 int main(int argc, char const *argv[])
 {
-int i;
+int i, n;
 int re = 0;
+char *flag;
+
 if (argc == 1)
 {
 printf("0\n");
@@ -21,7 +23,8 @@ return (0);
 }
 for (i = 1; i < argc; i++)
 {
-if (!isdigit((unsigned char)argv[i][0]))
+n = strtol(argv[i], &flag, 10);
+if (*flag)
 {
 printf("Error\n");
 return (1);
