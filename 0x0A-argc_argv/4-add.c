@@ -29,7 +29,7 @@ if (*flag)
 printf("Error\n");
 return (1);
 }
-re += atoi(argv[i]);
+re += n;
 }
 printf("%d\n", re);
 return (0);
