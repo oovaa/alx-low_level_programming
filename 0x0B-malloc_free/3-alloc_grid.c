@@ -23,8 +23,8 @@ for (i = 0; i < height; i++)
 grid[i] = (int *)calloc(width, sizeof(int));
 if (grid[i] == NULL)
 {
-for (j = i - 1; j >= 0; j--)
-free(grid[j]);
+for (i--; i >= 0; i--)
+free(grid[i]);
 free(grid);
 return (NULL);
 }
