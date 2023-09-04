@@ -9,6 +9,9 @@
  */
 char *argstostr(int ac, char **av)
 {
+char *result;
+int i;
+
 
 
 }
