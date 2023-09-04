@@ -18,7 +18,7 @@ if (s2 == NULL)
 s2 = "";
 
 len = strlen(s1) + strlen(s2) + 1;
-re = (char *) malloc(len *sizeof(char) + 1);
+re = (char *) malloc(len *sizeof(char));
 
 if (re == NULL)
 return (NULL);
