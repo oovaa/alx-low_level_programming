@@ -17,6 +17,11 @@ void *p;
 if (new_size == old_size)
 return (ptr);
 
+if (ptr == NULL)
+{
+p = malloc(new_size);
+return (p);
+}
 
 p = malloc(new_size);
 if (p == NULL)
@@ -30,8 +35,10 @@ return (NULL);
 
 if (ptr != NULL)
 {
+char *char_ptr = (char *)ptr;
+char *char_p = (char *)p;
 for (i = 0; i < min; i++)
-*((char *)p + i) = *((char *)ptr + i);
+char_p[i] = char_ptr[i];
 free(ptr);
 }
 return (p);
