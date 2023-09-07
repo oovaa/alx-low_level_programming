@@ -21,7 +21,7 @@ arr = malloc(size *sizeof(int));
 if (arr == NULL)
 return (NULL);
 
-for (i = 0; h < max; h++, i++)
+for (i = 0; h <= max; h++, i++)
 arr[i] = h;
 
 return (arr);
