@@ -21,7 +21,7 @@ re = malloc(nmemb * size);
 if (re == NULL)
 return (NULL);
 
-for (i = 0; i < nmemb; i++)
+for (i = 0; i < (nmemb * size); i++)
 re[i] = 0;
 
 return (re);
