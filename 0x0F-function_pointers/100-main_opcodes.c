@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+
 /**
  * print_opcodes - print the opcodes of this program
  * @a: address of the main function
@@ -31,19 +32,21 @@ void print_opcodes(char *a, int n)
  */
 int main(int argc, char **argv)
 {
-	int n;
+int n, i;
+if (argc != 2)
+{
+printf("Error\n");
+return (1);
+}
 
-	if (argc != 2)
-	{
-		printf("Error\n");
-		exit(1);
-	}
-	n = atoi(argv[1]);
-	if (n < 0)
-	{
-		printf("Error\n");
-		exit(2);
-	}
-	print_opcodes((char *)&main, n);
-	return (0);
+if (n < 0)
+{
+printf("Error\n");
+return (2);
+}
+
+n = atoi(argv[1]);
+print_opcodes((char *)&main, n);
+
+return (0);
 }
