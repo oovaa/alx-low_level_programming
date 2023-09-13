@@ -20,7 +20,7 @@ op_t ops[] = {
 };
 int i;
 i = 0;
-while (i < 6)
+while (ops[i] != NULL)
 {
 if (s[0] == ops[i].op[0])
 return (ops[i].f);
