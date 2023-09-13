@@ -18,13 +18,13 @@ printf("Error\n");
 exit(1);
 }
 
+n = atoi(argv[1]);
 if (n < 0)
 {
 printf("Error\n");
 exit(2);
 }
 
-n = atoi(argv[1]);
 a = (char *)&main;
 
 for (i = 0; i < n; i++)
