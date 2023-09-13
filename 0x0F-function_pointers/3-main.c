@@ -32,7 +32,6 @@ exit(99);
 
 printf("%d\n", re(n1, n2));
 
-
 return (0);
 }
 
