@@ -20,11 +20,11 @@ op_t ops[] = {
 };
 int i;
 i = 0;
-while (ops[i].op != NULL)
+while (i < 5)
 {
-if (s[0] == ops[i].op[0])
+if (strcmp(s, ops[i].op) == 0)
 return (ops[i].f);
 i++;
 }
-return (NULL);
+return (0);
 }
