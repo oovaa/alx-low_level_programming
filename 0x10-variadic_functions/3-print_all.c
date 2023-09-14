@@ -28,7 +28,6 @@ case 'i':
 printf("%i", va_arg(args, int));
 flag = 0;
 break;
-
 case 'f':
 printf("%f", va_arg(args, double));
 flag = 0;
