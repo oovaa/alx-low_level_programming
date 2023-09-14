@@ -14,7 +14,8 @@ int i, flag;
 char *str;
 va_start(args, format);
 i = 0;
-
+if (format == NULL)
+return;
 while (format[i])
 {
 switch (format[i])
