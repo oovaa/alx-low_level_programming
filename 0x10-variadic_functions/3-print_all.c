@@ -16,7 +16,7 @@ va_start(args, format);
 i = 0;
 if (format == NULL)
 return;
-while (format[i])
+while (format != NULL && format[i] != '\0')
 {
 switch (format[i])
 {
