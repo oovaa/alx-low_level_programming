@@ -22,10 +22,8 @@ for (i = 0; i < n; i++)
 {
 hold = va_arg(args, char *);
 if (hold == NULL)
-printf("(nil)");
-else
+hold = "(nil)";
 printf("%s", hold);
-
 if (i < n - 1)
 printf("%s ", separator);
 }
