@@ -18,12 +18,10 @@ return;
 cur = head;
 while (cur != NULL)
 {
-if (cur)
-free(cur);
+list_t *next = cur->next;
 if (cur->str)
 free(cur->str);
-
-cur = cur->next;
+free(cur);
+cur = next;
 }
-free(head);
 }
