@@ -23,7 +23,6 @@ if (text_content != NULL)
 		len++;
 }
 
-
 o = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 w = write(o, text_content, len);
 
