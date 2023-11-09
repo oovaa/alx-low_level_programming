@@ -47,6 +47,14 @@ void generate_key(char *username, char *key)
 	key[64 - 1] = '\0';
 }
 
+/**
+ * main - Entry point for the key generator program.
+ * @argc: The number of command-line arguments.
+ * @argv: An array of command-line argument strings.
+ *
+ * Return: EXIT_SUCCESS on success, EXIT_FAILURE on error.
+ */
+
 int main(int argc, char *argv[])
 {
 	char key[64];
