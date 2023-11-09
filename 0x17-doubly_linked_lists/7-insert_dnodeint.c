@@ -2,7 +2,7 @@
 
 /**
  * insert_dnodeint_at_index - Inserts a new node with a given value at a
- *	specified index in a doubly linked list.
+ * specified index in a doubly linked list.
  * @h: A pointer to the address of the head of the doubly linked list.
  * @idx: The index at which the new node should be inserted (starting from 0).
  * @n: The data to be stored in the new node.
@@ -12,45 +12,43 @@
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	unsigned int i = 0;
+	unsigned int i;
 	dlistint_t *newnode, *cur;
 
 	if (h == NULL)
 		return (NULL);
+
 	newnode = malloc(sizeof(dlistint_t));
 	if (!newnode)
 		return (NULL);
+
 	newnode->n = n;
+
 	if (idx == 0)
 	{
-	newnode = malloc(sizeof(dlistint_t));
-	if (newnode == NULL)
-		return (NULL);
-	newnode->n = n;
-	if (*h)
-		(*h)->prev = newnode;
-	newnode->prev = NULL;
-	newnode->next = *h;
-	*h = newnode;
-	return (newnode);
+		if (*h)
+			(*h)->prev = newnode;
+		newnode->prev = NULL;
+		newnode->next = *h;
+		*h = newnode;
+		return (newnode);
 	}
-	cur = *h;
 
-	while (i < idx && cur)
-	{
+	cur = *h;
+	for (i = 0; i < idx && cur != NULL; i++)
 		cur = cur->next;
-		i++;
-	}
+
 	if (cur == NULL)
 		return (NULL);
 
 	newnode->prev = cur->prev;
 	newnode->next = cur;
+
 	if (cur->prev)
 		cur->prev->next = newnode;
 	else
 		*h = newnode;
+
 	cur->prev = newnode;
 	return (newnode);
 }
-
