@@ -24,11 +24,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (!ht || !key)
 		return (NULL);
 
-	tmp = ht->array[hash_djb2((const unsigned char *)key)];
+	tmp = ht->array[key_index((const unsigned char *)key, ht->size)];
 	if (!tmp)
 		return (NULL);
-
-
 
 	while (tmp && strcmp(tmp->key, key) != 0)
 		tmp = tmp->next;
