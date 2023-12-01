@@ -38,13 +38,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 				tmp->value = strdup(value);
 				if (!tmp->value)
 					return (0);
+				return (1);
 			}
 			tmp = tmp->next;
 		}
 		tmp->next = makeNode(key, value);
 	return ((tmp->next) ? 1 : 0);
 	}
-	return (1);
+	return (0);
 }
 
 /**
