@@ -1,10 +1,12 @@
 CC = gcc
 SRC = *.c
-OBJ = *.o
+OBJ = $(SRC:.c=.o)
 NAME = school
 
-all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $^ -o $@
 
 %.o: %.c
-	$(CC) $< -o $@
+	$(CC) -c $< -o $@
