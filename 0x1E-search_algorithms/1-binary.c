@@ -1,5 +1,14 @@
 #include "search_algos.h"
 
+/**
+
+parr - a function that prints an array of integers
+@s: the starting index of the array to print from
+@e: the ending index of the array to print to
+@arr: a pointer to the first element of the array to print
+This function prints the elements of the array from index 's' to 'e'
+**/
+
 void parr(int s, int e, int *arr)
 {
 	printf("Searching in array: ");
